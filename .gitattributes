@@ -1,2 +1,3 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Preserve submission bytes exactly: the package mixes LF text files with a CRLF notebook,
+# and the repo must hash-match the zip.
+* -text
