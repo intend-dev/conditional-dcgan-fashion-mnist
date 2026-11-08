@@ -1,0 +1,19 @@
+# Envs - never commit
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data - documented access, not shipped
+data/
+*.tar.gz
+*.zip
+
+# Build
+build/out/
+
+# Vault / secrets
+.obsidian/
+.trash/
+.env
