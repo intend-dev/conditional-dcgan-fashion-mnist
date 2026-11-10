@@ -10,7 +10,7 @@
 | Classes | `10` classes, with `7,000` images in each class |
 | Training split | `60,000` images, with `6,000` images per class. The files use the IDX format. |
 | Test split | `10,000` images, with `1,000` images per class. The files use the IDX format. |
-| License | MIT (the repository's `LICENSE` file). This license permits academic use, redistribution, commercial use, and the creation of derivative generated samples under its terms. |
+| License | MIT (the upstream Fashion-MNIST repository by Zalando Research). This license permits academic use, redistribution, commercial use, and the creation of derivative generated samples under its terms. |
 
 ## Source
 
