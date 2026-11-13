@@ -25,6 +25,13 @@ uv pip install --python .venv\Scripts\python.exe --extra-index-url https://downl
 python -m nbconvert --to notebook --execute --inplace generative_model.ipynb
 ```
 
+```bash
+# Linux / macOS
+uv venv --python 3.13 .venv
+uv pip install --python .venv/bin/python --extra-index-url https://download.pytorch.org/whl/cu128 --index-strategy unsafe-best-match -r requirements.txt
+.venv/bin/python -m nbconvert --to notebook --execute --inplace generative_model.ipynb
+```
+
 The first execution downloads Fashion-MNIST (four `.gz` archives, about `31` MB) under `data/FashionMNIST/raw/` and is offline-safe afterward; the notebook verifies the archive checksums before training.
 If you regenerate `requirements.txt`, avoid PowerShell `>` because it writes UTF-16.
 A CPU-only machine runs the same code, only slower.

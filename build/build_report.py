@@ -27,6 +27,7 @@ line, so none is checked.
 from __future__ import annotations
 
 import hashlib
+import os
 import re
 import shutil
 import subprocess
@@ -42,7 +43,7 @@ PDF = ROOT / "Generative_AI_Analysis_Report.pdf"
 OUT_DIR = ROOT / "build" / "out"
 HTML = OUT_DIR / "report.html"
 PREV_PDF = ROOT / "test-runs" / "Generative_AI_Analysis_Report.previous.pdf"
-CHROME = Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
+CHROME = Path(os.environ.get("CHROME_BIN") or r"C:\Program Files\Google\Chrome\Application\chrome.exe")
 
 HEADINGS = (
     "Overview",
