@@ -3,6 +3,7 @@
 ## Overview
 
 This project trains a conditional DCGAN that generates `28x28` grayscale Fashion-MNIST garment images, conditioned on one of the `10` class labels. An evaluation classifier trained only on real images reads the generated batches: macro class agreement `0.9008` against a `0.10` chance level, with per-class agreement, feature-space Fréchet distances (`20.9619` generated vs `1.3127` for the real-vs-real reference), intra-class diversity ratios, and a failure analysis all in the notebook.
+Repository: https://github.com/intend-dev/conditional-dcgan-fashion-mnist
 
 ## Repository
 
