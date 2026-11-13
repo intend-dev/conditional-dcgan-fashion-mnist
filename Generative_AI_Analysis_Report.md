@@ -31,7 +31,7 @@ The training images were divided between the project's two models. The generator
 
 - classifier training: `50,000` images, used to update classifier weights
 - classifier validation: `10,000` images, used to monitor per-epoch accuracy (no gradient updates, no model selection)
-- test set: the original `10,000`-image test set, held out from training and read exactly once, after classifier training
+- test set: the original `10,000`-image test set, held out from training; used only after classifier training (test accuracy and Fréchet features), never for model selection
 
 Data handling and parameters used in the project:
 
@@ -204,7 +204,7 @@ I also calculated a real-vs-real comparison to establish a reference scale. This
 
 The generated distribution's **squared Fréchet distance** (`20.9619`) was about sixteen times the real-vs-real reference (`1.3127`), so the generated images sit measurably farther from the real images in the classifier's feature space. These absolute values are specific to this feature space and are not directly comparable with Inception-based results in the literature. The figure should therefore be read as a within-project comparison, not a general measure of image quality.
 
-The gap also varies by class. Per-class distances range from `19.7376` for Trouser, where agreement is `1.00`, to `60.0197` for Sandal, where agreement is `0.96`. A class can thus score well on agreement while its generated images remain far from the real ones in feature space. Class agreement and Fréchet distance measure different things, so both are needed to judge the generator.
+The gap also varies by class. Per-class distances range from `19.7376` for Trouser, where agreement is `1.00`, to `77.4557` for Bag, where agreement is also `1.00`. A class can thus score well on agreement while its generated images remain far from the real ones in feature space. Class agreement and Fréchet distance measure different things, so both are needed to judge the generator.
 
 ### Intra-class diversity
 
@@ -290,7 +290,7 @@ The upstream Fashion-MNIST repository is distributed under the MIT license, as r
 Several project choices support reproducibility and transparency:
 
 - **Seeding and logging:** Fixed seeds and logged losses make training easier to inspect and repeat.
-- **Data splits:** The validation and test splits are kept separate, and the test split is read exactly once.
+- **Data splits:** The validation and test splits are kept separate; the test split is used only after training and never for model selection.
 - **Failure analysis:** The failure analysis is kept in the project artifacts rather than left out of the report.
 - **Data verification:** Before training, the notebook verifies the dataset archive checksums instead of relying only on the documentation.
 - **Figure checks:** The figures are checked against the outputs recorded by the code.

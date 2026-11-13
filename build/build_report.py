@@ -94,7 +94,7 @@ PINNED = (
     ("20.9619", "Fréchet distance generated vs real test"),
     ("1.3127", "real-vs-real Fréchet reference"),
     ("19.7376", "per-class Fréchet minimum (Trouser)"),
-    ("60.0197", "per-class Fréchet maximum (Sandal)"),
+    ("77.4557", "per-class Fréchet maximum (Bag)"),
     ("0.87", "intra-class diversity macro ratio"),
     ("0.77", "diversity ratio minimum (T-shirt/top and Dress)"),
     ("0.98", "diversity ratio maximum (Sandal)"),
