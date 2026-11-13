@@ -57,7 +57,7 @@ HEADINGS = (
 )
 
 COVER_FIELDS = ("Author:", "Dataset:")
-TITLE = "Generative AI Applications: Analysis Report"
+TITLE = "Generative AI Analysis and Ethics Report"
 AUTHOR = "Francisco Mateus"
 
 # Pinned values from the executed notebook run, as they appear in the report.

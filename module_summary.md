@@ -1,6 +1,6 @@
-# Generating Clothing Images with a Conditional Deep Convolutional Generative Adversarial Network
+# Generative AI Analysis and Ethics Report
 
-Generative AI Applications Analysis Report
+Generating Clothing Images with a Conditional Deep Convolutional Generative Adversarial Network
 
 Author: Francisco Mateus
 
