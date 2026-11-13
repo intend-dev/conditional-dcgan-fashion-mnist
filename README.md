@@ -8,7 +8,7 @@ Repository: https://github.com/intend-dev/conditional-dcgan-fashion-mnist
 ## Repository
 
 - `generative_model.ipynb`: executed notebook with data loading, checksum verification, model definition, training, evaluation, figures, and a closing summary
-- `Generative_AI_Analysis_Report.md` and `Generative_AI_Analysis_Report.pdf`: the written report and the print-ready report
+- `module_summary.md` and `module_summary.pdf`: the written report and the print-ready report
 - `figures/`: the seven report figures, exported by the notebook
 - `DATASET.md`: dataset access, contents, checksums, license
 - `requirements.txt`: pinned package versions

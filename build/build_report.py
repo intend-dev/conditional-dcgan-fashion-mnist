@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-r"""Build Generative_AI_Analysis_Report.pdf from Generative_AI_Analysis_Report.md
+r"""Build module_summary.pdf from module_summary.md
 (Chrome headless) and verify it.
 
 Run from the repo root (or anywhere; paths resolve from this file):
@@ -7,7 +7,7 @@ Run from the repo root (or anywhere; paths resolve from this file):
     .venv\Scripts\python.exe build\build_report.py
 
 Exit 0 only when every check passes; exit 1 prints each failing check.
-The script never writes Generative_AI_Analysis_Report.md.
+The script never writes module_summary.md.
 
 Rendering: a centered cover page split off before the first h2, per-page page
 numbers via the @page counter, each image wrapped with its caption in one
@@ -38,11 +38,11 @@ import markdown
 from pypdf import PdfReader, PdfWriter
 
 ROOT = Path(__file__).resolve().parent.parent
-MD = ROOT / "Generative_AI_Analysis_Report.md"
-PDF = ROOT / "Generative_AI_Analysis_Report.pdf"
+MD = ROOT / "module_summary.md"
+PDF = ROOT / "module_summary.pdf"
 OUT_DIR = ROOT / "build" / "out"
 HTML = OUT_DIR / "report.html"
-PREV_PDF = ROOT / "test-runs" / "Generative_AI_Analysis_Report.previous.pdf"
+PREV_PDF = ROOT / "test-runs" / "module_summary.previous.pdf"
 CHROME = Path(os.environ.get("CHROME_BIN") or r"C:\Program Files\Google\Chrome\Application\chrome.exe")
 
 HEADINGS = (
